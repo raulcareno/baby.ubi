@@ -1,1 +1,61 @@
-<h1>Hello World!!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Vertical Buttons with JS Actions</title>
+<!-- Bootstrap CSS CDN -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+    .btn-custom {
+        padding: 20px 40px;
+        font-size: 20px;
+        width: 100%;
+    }
+</style>
+<script>
+// Función para abrir Google Maps
+function abrirEnGoogleMaps() {
+    var latitud = '40.714224';
+    var longitud = '-73.961452';
+    window.open(`https://www.google.com/maps?q=${latitud},${longitud}`);
+}
+
+// Función para abrir Apple Maps
+function abrirEnAppleMaps() {
+    var latitud = '40.714224';
+    var longitud = '-73.961452';
+    window.open(`http://maps.apple.com/?q=${latitud},${longitud}`);
+}
+
+// Función para abrir Waze
+function abrirEnWaze() {
+    var latitud = '-33.712888'; //-33.712888, -70.690414
+    var longitud = '-70.690414';
+    window.open(`https://waze.com/ul?ll=${latitud},${longitud}&navigate=yes`);
+}
+</script>
+</head>
+<body>
+<div class="container text-center mt-5">
+    <div class="row">
+        <div class="col-12 mb-3">
+            <!-- Google Maps button -->
+            <button class="btn btn-primary btn-custom" onclick="abrirEnGoogleMaps()">Google Maps</button>
+        </div>
+        <div class="col-12 mb-3">
+            <!-- Apple Maps button -->
+            <button class="btn btn-secondary btn-custom" onclick="abrirEnAppleMaps()">Apple Maps</button>
+        </div>
+        <div class="col-12">
+            <!-- Waze button -->
+            <button class="btn btn-success btn-custom" onclick="abrirEnWaze()">Waze</button>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap JS and Popper.js CDN -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
